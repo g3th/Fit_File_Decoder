@@ -6,8 +6,6 @@ class DiskOperations:
     def __init__(self, filename):
         self.path = str(Path(__file__).parent) + "/fit_files/"
         self.filename = filename
-
-    def create_folders(self):
         os.makedirs(self.path, exist_ok=True)
 
     def open_file(self):

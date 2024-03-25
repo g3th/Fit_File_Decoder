@@ -14,9 +14,8 @@ class DecodeFile:
     def long_lat_block(self):
         for j in range(len(self.b_list)):
             try:
-                if "d4" in str(self.b_list[j]) and "3b" in str(self.b_list[j + 1]) and "ff" in str(self.b_list[j + 9]):
-                    if "ff" not in (self.b_list[j + 6], self.b_list[j + 7], self.b_list[j + 8]):
-                        self.append_list(j)
+                if "c" in str(self.b_list[j]) and "ff" in str(self.b_list[j + 1]) and "07" in str(self.b_list[j + 12]):
+                    self.append_list(j + 15)
             except IndexError:
                 break
 
